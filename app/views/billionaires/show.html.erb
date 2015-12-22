@@ -1,12 +1,16 @@
+<h1>
+  <%= @billionaire.name %>
+</h1>
+
+<div class= "row">
+
 <p id="notice"><%= notice %></p>
 
 
-<%= image_tag @billionaire.avatar.url || 'avatar.jpg' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @billionaire.name %>
-</p>
+
+<div class="col-md-6">
+<%= image_tag @billionaire.avatar.url || 'avatar.jpg' %>
 
 <p>
   <strong>Address:</strong>
@@ -32,3 +36,15 @@
 
 <%= link_to 'Edit', edit_billionaire_path(@billionaire) %> |
 <%= link_to 'Back', billionaires_path %>
+
+</div>
+
+<div class="col-md-6">
+
+<iframe width="600" height="450" frameborder="0" 
+style="border:0" 
+src="https://www.google.com/maps/embed/v1/place?q=<%= @billionaire.address.parameterize %>
+&key=AIzaSyDR8RIAUMrYjWTGAMSA57O_Av9sA008d50" allowfullscreen></iframe>
+
+</div>
+</div>
