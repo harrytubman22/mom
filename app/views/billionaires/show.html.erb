@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= image_tag @billionaire.avatar.url || 'avatar.jpg' %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @billionaire.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @billionaire.address %>
+</p>
+
+<p>
+  <strong>Net worth:</strong>
+  $<%= @billionaire.net_worth %> Billion
+</p>
+
+
+<p>
+  <strong>Industry:</strong>
+  <%= @billionaire.industry %>
+</p>
+
+<p>
+  <strong>Primary Coproration:</strong><br>
+  <%=link_to ( image_tag @billionaire.corporation.avatar.url), @billionaire.corporation %> <br>
+  <%= link_to @billionaire.corporation.name, @billionaire.corporation %>
+</p>
+
+<%= link_to 'Edit', edit_billionaire_path(@billionaire) %> |
+<%= link_to 'Back', billionaires_path %>

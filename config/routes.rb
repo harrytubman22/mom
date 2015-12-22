@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :corporations
+
+  resources :billionaires
+
   resources :posts
   resources :comments, only: [:create, :destroy]
   devise_for :users

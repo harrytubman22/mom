@@ -1,0 +1,41 @@
+<%= form_for(@billionaire) do |f| %>
+  <% if @billionaire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@billionaire.errors.count, "error") %> prohibited this billionaire from being saved:</h2>
+
+      <ul>
+      <% @billionaire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :net_worth %><br>
+    <%= f.text_field :net_worth %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="field">
+    <%= f.label :industry %><br>
+    <%= f.text_field :industry %>
+  </div>
+  <div class="field">
+    <%= f.label "Primary Corporation" %><br>
+    <%= f.number_field :corporation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @corporation.avatar.url || 'avatar.jpg' %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @corporation.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @corporation.address %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @corporation.industry %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @corporation.phone_number %>
+</p>
+
+<p>
+  <strong>Web site:</strong>
+  <%= @corporation.web_site %>
+</p>
+
+<p>
+  <strong>Associated Billionaires:</strong><br>
+  <%  @billionaires.each do |billionaire| %>
+  <%= link_to billionaire.name, billionaire_path(billionaire) %><br>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_corporation_path(@corporation) %> |
+<%= link_to 'Back', corporations_path %>

@@ -1,0 +1,33 @@
+<h1>Listing billionaires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Net worth</th>
+      <th>Avatar</th>
+      <th>Industry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @billionaires.each do |billionaire| %>
+      <tr>
+        <td><%= billionaire.name %></td>
+        <td><%= billionaire.address %></td>
+        <td><%= billionaire.net_worth %></td>
+        <td><%= billionaire.avatar %></td>
+        <td><%= billionaire.industry %></td>
+        <td><%= link_to 'Show', billionaire %></td>
+        <td><%= link_to 'Edit', edit_billionaire_path(billionaire) %></td>
+        <td><%= link_to 'Destroy', billionaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Billionaire', new_billionaire_path %>
