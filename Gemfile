@@ -33,10 +33,10 @@ end
 group :production do
   gem 'pg'
   gem 'unicorn'
-  gem 'cloudinary'
   gem 'rails_12factor'
 end
 
+gem 'cloudinary'
 gem 'devise'
 gem 'carrierwave'
 gem 'friendly_id', '~> 5.0.0'

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dosiodm9p
+  api_key: '196576698932613'
+  api_secret: "-FRhm0awSq1myShKgA41wcgZ8zk"
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dosiodm9p
+  api_key: '196576698932613'
+  api_secret: "-FRhm0awSq1myShKgA41wcgZ8zk"
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dosiodm9p
+  api_key: '196576698932613'
+  api_secret: "-FRhm0awSq1myShKgA41wcgZ8zk"
+  enhance_image_tag: true
+  static_image_support: false
