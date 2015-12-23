@@ -32,7 +32,7 @@
 <p>
   <strong>Associated Billionaires:</strong><br>
   <%  @billionaires.each do |billionaire| %>
-    <%=link_to (image_tag billionaire.avatar.url), billionaire_path(billionaire) %> <br>
+    <%=link_to (image_tag billionaire.avatar.url || 'avatar.jpg', class: 'avatar'), billionaire_path(billionaire) %> <br>
     <%= link_to billionaire.name, billionaire_path(billionaire) %>
   <% end %>
 </p>

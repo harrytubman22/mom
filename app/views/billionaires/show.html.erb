@@ -30,7 +30,8 @@
 
 <p>
   <strong>Primary Coproration:</strong><br>
-  <%=link_to ( image_tag @billionaire.corporation.avatar.url), @billionaire.corporation %> <br>
+  <%=link_to ( image_tag @billionaire.corporation.avatar.url || 'avatar.jpg', class: 'avatar'), 
+      @billionaire.corporation %> <br>
   <%= link_to @billionaire.corporation.name, @billionaire.corporation %>
 </p>
 
